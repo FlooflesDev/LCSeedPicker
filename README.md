@@ -8,3 +8,4 @@ A seed can be set by opening the Quick menu (ESC menu)
 The seed is then used for generating the moon
 
 ![](images/seedused.png)
+

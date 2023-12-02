@@ -29,7 +29,7 @@ namespace LCSeedPicker.Patches
 			Plugin.SeedInput = null;
 		}
 
-		// TODO: Open menu when leave game is declined.
+		// TODO: Open input when leave game is declined.
 		[HarmonyPatch("LeaveGame")]
 		[HarmonyPrefix]
 		public static void openLeaveGameWindow()
@@ -52,6 +52,7 @@ namespace LCSeedPicker.Patches
 
 		private static SeedInput GetSeedInput()
         {
+			if (Plugin.SeedInput == null) return null;
 			return Plugin.SeedInput.GetComponent<SeedInput>();
 		}
 	}

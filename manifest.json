@@ -1,6 +1,6 @@
 {
     "name": "LCSeedPicker",
-    "version_number": "1.0.1",
+    "version_number": "1.0.2",
     "website_url": "https://github.com/FlooflesDev/LCSeedPicker",
     "description": "A mod that allows you to pick your seed for the game.",
     "dependencies": [

@@ -1,9 +1,11 @@
 # LCSeedPicker
 A Lethal Company mod that allows players to set the seed of the moon.
 
-Functionality will either be setting the seed through a terminal command:
-```
-seed 123456789
-```
+## Setting the seed
+A seed can be set by opening the Quick menu (ESC menu)
+![](images/seedinput.png)
 
-Or prompting to player to enter a seed after routing to a moon (leaving it blank would give a random seed)
+The seed is then used for generating the moon
+
+![](images/seedused.png)
+

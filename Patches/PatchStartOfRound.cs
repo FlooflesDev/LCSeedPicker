@@ -12,9 +12,10 @@ namespace LCSeedPicker.Patches
         [HarmonyPrefix]
         public static void SetSeed(StartOfRound __instance)
         {
+            SeedInput seedInput = Plugin.SeedInput.GetComponent<SeedInput>();
             // If currentLevel is null don't do anything (in what case is currentLevel null?)
-            if (__instance.currentLevel == null) return;
-            int seed = Plugin.SeedInput.GetComponent<SeedInput>().GetSeed();
+            if (__instance.currentLevel == null || seedInput == null) return;
+            int seed = seedInput.GetSeed();
             if (seed == -1)
             {
                 Plugin.Logger.LogDebug($"Using random seed for {__instance.currentLevel.PlanetName}...");

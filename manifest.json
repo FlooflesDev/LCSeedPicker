@@ -1,0 +1,9 @@
+{
+    "name": "LCSeedPicker",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/FlooflesDev/LCSeedPicker",
+    "description": "A mod that allows you to pick your seed for the game.",
+    "dependencies": [
+        "BepInEx-BepInExPack-5.4.2100"
+    ]
+}

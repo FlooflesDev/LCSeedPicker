@@ -25,8 +25,6 @@ namespace LCSeedPicker.Patches
 		[HarmonyPrefix]
 		public static void destroyMenuOnLeave()
 		{
-			Plugin.Logger.LogInfo("Left game, input should be destroyed.");
-
 			GetSeedInput().DestroyInput();
 			Plugin.SeedInput = null;
 		}
@@ -43,17 +41,13 @@ namespace LCSeedPicker.Patches
 
 		private static void open()
         {
-			Plugin.Logger.LogInfo("Menu opened, input should be visible.");
-			Plugin.Logger.LogInfo($"Seedinput: {GetSeedInput()}");
-			GetSeedInput().isVisible = true;
-			Plugin.Logger.LogInfo($"Visible from Menu: {GetSeedInput().isVisible}");
+			SeedInput seedInput = GetSeedInput();
+			if (seedInput != null) seedInput.isVisible = true;
 		}
 		private static void close()
         {
-			Plugin.Logger.LogInfo("Menu closed, input should be hidden.");
-			Plugin.Logger.LogInfo($"Seedinput: {GetSeedInput()}");
-			GetSeedInput().isVisible = false;
-			Plugin.Logger.LogInfo($"Visible from Menu: {GetSeedInput().isVisible}");
+			SeedInput seedInput = GetSeedInput();
+			if (seedInput != null) seedInput.isVisible = false;
 		}
 
 		private static SeedInput GetSeedInput()

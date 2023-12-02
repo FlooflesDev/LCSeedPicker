@@ -17,9 +17,6 @@ namespace LCSeedPicker.Patches
 				Plugin.SeedInput = new GameObject("SeedInputField");
 				Plugin.SeedInput.hideFlags = HideFlags.HideAndDontSave;
 				Plugin.SeedInput.AddComponent<SeedInput>();
-				
-
-				Plugin.Logger.LogInfo((object)"GUI Created");
             }
 		}
 	}

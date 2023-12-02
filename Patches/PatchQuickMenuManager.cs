@@ -25,7 +25,9 @@ namespace LCSeedPicker.Patches
 		[HarmonyPrefix]
 		public static void destroyMenuOnLeave()
 		{
-			GetSeedInput().DestroyInput();
+			SeedInput seedInput = GetSeedInput();
+			if (seedInput != null) seedInput.DestroyInput();
+			
 			Plugin.SeedInput = null;
 		}
 

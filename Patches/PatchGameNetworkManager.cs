@@ -8,7 +8,7 @@ namespace LCSeedPicker.Patches
     [HarmonyPatch(typeof(GameNetworkManager))]
     internal class PatchGameNetworkManager
     {
-		[HarmonyPatch("SteamMatchmaking_OnLobbyCreated")]
+		[HarmonyPatch("StartHost")]
 		[HarmonyPrefix]
 		public static void PatchOnLobbyCreated()
 		{

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LCSeedPicker", "LethalCompanyTemplate\LCSeedPicker.csproj", "{2DC60A9D-F44B-4B06-8A37-9B05D6D2CAC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LCSeedPicker", "LCSeedPicker.csproj", "{3E3F8D3C-1B1C-4087-8C0D-F1FD6EE127DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2DC60A9D-F44B-4B06-8A37-9B05D6D2CAC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2DC60A9D-F44B-4B06-8A37-9B05D6D2CAC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2DC60A9D-F44B-4B06-8A37-9B05D6D2CAC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2DC60A9D-F44B-4B06-8A37-9B05D6D2CAC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E3F8D3C-1B1C-4087-8C0D-F1FD6EE127DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E3F8D3C-1B1C-4087-8C0D-F1FD6EE127DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E3F8D3C-1B1C-4087-8C0D-F1FD6EE127DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E3F8D3C-1B1C-4087-8C0D-F1FD6EE127DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {9DC21FBF-0058-43E1-8FBC-7221354BF1DF}
+		SolutionGuid = {46FFD7A0-8D5A-4428-9371-FDE416E38D3A}
 	EndGlobalSection
 EndGlobal

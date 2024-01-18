@@ -1,3 +1,6 @@
+## 1.2.0
+- The last random seed is now shown in the ESC menu and can easily be copied & pasted
+
 ## 1.1.0
 - Mod now works for LAN games.
 

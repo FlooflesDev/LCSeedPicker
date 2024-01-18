@@ -10,7 +10,8 @@ namespace LCSeedPicker.Components
     {
 
         public bool isVisible;
-        private string _seedString = "";
+        private string _seedInputString = "";
+        private string _seedOutputString = "";
 
         private int _maxSeedLength = 100;
         private float _inputWidth = 0f;
@@ -27,7 +28,7 @@ namespace LCSeedPicker.Components
             // Set input size based on screen size
             // TODO: add minimum size.
             _inputWidth = Math.Max(Screen.width / 12f, 100f);
-            _inputHeight = Math.Max(Screen.height / 6f, 10f);
+            _inputHeight = Math.Max(Screen.height / 12f, 10f);
 
         }
         
@@ -41,11 +42,16 @@ namespace LCSeedPicker.Components
             }
 
             float inputX = _inputWidth*2;
-            float inputY = Screen.height / 2 - _inputHeight / 2;
+            float inputY = Screen.height / 3 - _inputHeight / 2;
 
             GUILayout.BeginArea(new Rect(inputX, inputY, _inputWidth, _inputHeight));
-            GUILayout.Label("Seed (leave empty for random):");
-            _seedString = FilterSeedInput(GUILayout.TextField(_seedString, _maxSeedLength, _inputStyle));
+            GUILayout.Label("Seed (empty for random):");
+            _seedInputString = FilterSeedInput(GUILayout.TextField(_seedInputString, _maxSeedLength, _inputStyle));
+            GUILayout.EndArea();
+
+            GUILayout.BeginArea(new Rect(inputX, inputY+_inputHeight, _inputWidth, _inputHeight));
+            GUILayout.Label("Last random seed:");
+            GUILayout.TextArea(_seedOutputString, _inputStyle);
             GUILayout.EndArea();
         }
 
@@ -61,7 +67,7 @@ namespace LCSeedPicker.Components
             try
             {
                 // Convert seed to int
-                seed = int.Parse(_seedString);
+                seed = int.Parse(_seedInputString);
 
             } catch (Exception)
             {
@@ -71,6 +77,11 @@ namespace LCSeedPicker.Components
             if (seed < 0 || seed > Math.Pow(10, _maxSeedLength)) seed = -1;
             
             return seed;
+        }
+
+        public void SetLastSeed(int lastSeed)
+        {
+            _seedOutputString = $"{lastSeed}";
         }
 
         public void DestroyInput()

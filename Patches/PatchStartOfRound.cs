@@ -31,5 +31,18 @@ namespace LCSeedPicker.Patches
             __instance.overrideRandomSeed = true;
             __instance.overrideSeedNumber = seed;
         }
+
+        [HarmonyPatch("StartGame")]
+        [HarmonyPostfix]
+        public static void GetSeed(StartOfRound __instance)
+        {
+            SeedInput seedInput = Plugin.SeedInput.GetComponent<SeedInput>();
+            // If currentLevel is null don't do anything (in what case is currentLevel null?)
+            if (__instance.currentLevel == null || seedInput == null) return;
+
+            if (!__instance.overrideRandomSeed) {
+                seedInput.SetLastSeed(__instance.randomMapSeed);
+            }
+        }
     }
 }

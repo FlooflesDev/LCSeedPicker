@@ -1,3 +1,6 @@
+## 1.2.1
+- Slightly moved the UI as a temporary fix to incompatibilities with other mods.
+
 ## 1.2.0
 - The last random seed is now shown in the ESC menu and can easily be copied & pasted
 

@@ -42,14 +42,14 @@ namespace LCSeedPicker.Components
             }
 
             float inputX = _inputWidth*2;
-            float inputY = Screen.height / 3 - _inputHeight / 2;
+            float inputY = Screen.height / 2 - _inputHeight / 2;
 
             GUILayout.BeginArea(new Rect(inputX, inputY, _inputWidth, _inputHeight));
             GUILayout.Label("Seed (empty for random):");
             _seedInputString = FilterSeedInput(GUILayout.TextField(_seedInputString, _maxSeedLength, _inputStyle));
             GUILayout.EndArea();
 
-            GUILayout.BeginArea(new Rect(inputX, inputY+_inputHeight, _inputWidth, _inputHeight));
+            GUILayout.BeginArea(new Rect(inputX+_inputWidth, inputY, _inputWidth, _inputHeight));
             GUILayout.Label("Last random seed:");
             GUILayout.TextArea(_seedOutputString, _inputStyle);
             GUILayout.EndArea();

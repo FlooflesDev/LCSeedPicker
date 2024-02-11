@@ -10,6 +10,8 @@ namespace LCSeedPicker.Patches
     {
         [HarmonyPatch("StartGame")]
         [HarmonyPrefix]
+        [HarmonyAfter(new string[] { "MoonOfTheDay" })]
+        [HarmonyPriority(Priority.Last)]
         public static void SetSeed(StartOfRound __instance)
         {
             if (Plugin.SeedInput == null) return;

@@ -1,3 +1,6 @@
+## 1.2.2
+- Make sure LCSeedPicker runs after other patches to ensure the seed is set.
+
 ## 1.2.1
 - Slightly moved the UI as a temporary fix to incompatibilities with other mods.
 
